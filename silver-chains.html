@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silver Chains – Chandrodaya Jewels</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="index.html#about" onclick="closeMobile()">About</a>
+  <a href="index.html#collection" onclick="closeMobile()">Collection</a>
+  <a href="index.html#contact" onclick="closeMobile()">Contact</a>
+  <a href="index.html#store" onclick="closeMobile()">Store</a>
+</div>
+
+<!-- NAVBAR (always dark on inner pages) -->
+<nav id="navbar" class="scrolled">
+  <a href="index.html" class="nav-logo">Chandrodaya <span>Jewels</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#collection">Collection</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="index.html#store">Store</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="listing-page">
+
+  <!-- ① Hero banner  ← change background image per page -->
+  <div class="listing-hero">
+    <div class="listing-hero-bg"
+      style="background-image:url('https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=1400&q=80')">
+    </div>
+    <div class="listing-hero-content">
+      <!-- ② Title  ← change metal + category -->
+      <h1><em>Silver</em> Chains</h1>
+      <a href="index.html#collection" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Collections
+      </a>
+    </div>
+  </div>
+
+  <!-- ③ Breadcrumb  ← change metal + category labels/links -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="index.html#collection">Collection</a>
+    <span>/</span>
+    Silver
+    <span>/</span>
+    Chains
+  </div>
+
+  <!-- ④ Product cards  ← add your actual items here -->
+  <div class="product-grid">
+
+    <div class="prod-card fade-up">
+      <div class="prod-img">
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&q=80" alt="Box Chain">
+        <div class="prod-img-overlay"></div>
+        <span class="prod-badge">Silver</span>
+      </div>
+      <div class="prod-info">
+        <p class="prod-name">Classic Box Chain</p>
+        <p class="prod-type">925 Silver · 18 inch</p>
+        <p class="prod-price">₹ 4,500</p>
+        <button class="prod-enquire">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card fade-up">
+      <div class="prod-img">
+        <img src="https://images.unsplash.com/photo-1573408301185-9519f94315fd?w=600&q=80" alt="Rope Chain">
+        <div class="prod-img-overlay"></div>
+        <span class="prod-badge">Silver</span>
+      </div>
+      <div class="prod-info">
+        <p class="prod-name">Twisted Rope Chain</p>
+        <p class="prod-type">925 Silver · 20 inch</p>
+        <p class="prod-price">₹ 6,200</p>
+        <button class="prod-enquire">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card fade-up">
+      <div class="prod-img">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80" alt="Figaro Chain">
+        <div class="prod-img-overlay"></div>
+        <span class="prod-badge">Silver</span>
+      </div>
+      <div class="prod-info">
+        <p class="prod-name">Figaro Link Chain</p>
+        <p class="prod-type">925 Silver · 22 inch</p>
+        <p class="prod-price">₹ 5,800</p>
+        <button class="prod-enquire">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card fade-up">
+      <div class="prod-img">
+        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&q=80" alt="Snake Chain">
+        <div class="prod-img-overlay"></div>
+        <span class="prod-badge">Silver</span>
+      </div>
+      <div class="prod-info">
+        <p class="prod-name">Sleek Snake Chain</p>
+        <p class="prod-type">925 Silver · 18 inch</p>
+        <p class="prod-price">₹ 7,100</p>
+        <button class="prod-enquire">Enquire Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MINIMAL FOOTER -->
+<footer>
+  <div class="footer-bottom" style="border-top:none;padding-top:0">
+    <p>© 2025 <span>Chandrodaya Jewels</span>. All rights reserved.</p>
+    <p><a href="index.html" style="color:var(--copper);text-decoration:none;">← Back to Home</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandrodaya Jewels</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="./favicon.jpeg">
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#collection" onclick="closeMobile()">Collection</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="#store" onclick="closeMobile()">Store</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+   <a href="index.html" class="nav-logo">
+    <img src="./favicon.jpeg" alt="Chandrodaya Jewels Logo" class="nav-logo-img">
+    Chandrodaya <span>Jewels</span>
+    </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#store">Store</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content" id="heroContent">
+    <h1 class="hero-title">Chandrodaya <br><em style="font-weight: 800;">Jewels</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">Timeless Elegance, Crafted for You</p>
+    <a href="#collection" class="btn-primary">Explore Collection</a>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text fade-up">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">Crafted with<br><em>Passion & Precision</em></h2>
+    <div class="gold-line"></div>
+    <p class="section-sub">CHANDRODAYA JEWELS is a premium jewellery store dedicated to offering high-quality, beautifully crafted jewellery pieces for every occasion. Our collection includes a wide range of gold, diamond, silver, and gemstone jewellery, carefully designed to blend traditional elegance with modern style. Whether it's for weddings, festivals, gifts, or everyday wear, we aim to provide our customers with exquisite pieces that reflect their personal style and celebrate life's special moments. With a focus on craftsmanship, authenticity, and customer satisfaction, CHANDRODAYA JEWELS is committed to being your trusted destination for timeless jewellery.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     COLLECTION SECTION
+     Tabs: All | Silver | Gold | Diamond
+     Cards: category tiles per metal
+════════════════════════════════════════ -->
+<section id="collection">
+  <div class="section-header fade-up">
+    <p class="section-label">Crafted for You</p>
+    <h2 class="section-title">Our <em>Collection</em></h2>
+    <div class="gold-line"></div>
+    <p class="section-sub">Select a metal, then explore each jewellery category.</p>
+  </div>
+
+  <!-- Primary tabs -->
+  <div class="tabs fade-up">
+    <button class="tab-btn active" onclick="switchMetal('gold', this)">Gold</button>
+    <button class="tab-btn" onclick="switchMetal('diamond', this)">Diamond</button>
+    <button class="tab-btn" onclick="switchMetal('silver', this)">Silver</button>
+
+  </div>
+
+  <!-- ── GOLD ── -->
+ <!-- ── GOLD ── -->
+  <div class="cat-grid hidden" id="panel-gold">
+       <a href="gold/gold-necklaces.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./necklace/necklace-1.jpeg" alt="Gold Necklaces"></div>
+      <div class="cat-label-badge gold">Gold</div>
+      <div class="cat-info"><p class="cat-name">Necklaces</p><p class="cat-meta">22K Gold collection</p></div>
+    </a>
+    <a href="gold/gold-rings.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./ring/ring-1.jpeg" alt="Gold Rings"></div>
+      <div class="cat-label-badge gold">Gold</div>
+      <div class="cat-info"><p class="cat-name">Rings</p><p class="cat-meta">22K Gold collection</p></div>
+    </a>
+     <a href="C:\Users\hp\OneDrive\Desktop\Jewellary\Chandrodaya-Jewels\gold\gold-kada.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="C:\Users\hp\OneDrive\Desktop\Jewellary\Chandrodaya-Jewels\gold\GK1.jpg" alt="Gold Kadass"></div>
+      <div class="cat-label-badge gold">Gold</div>
+      <div class="cat-info"><p class="cat-name">Kadas</p><p class="cat-meta">22K Gold collection</p></div>
+    </a>
+    <a href="gold/gold-chains.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./chain/chain-1.jpeg" alt="Gold Chains"></div>
+      <div class="cat-label-badge gold">Gold</div>
+      <div class="cat-info"><p class="cat-name">Chains</p><p class="cat-meta">22K Gold collection</p></div>
+    </a>
+    <a href="gold/gold-bracelets.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./bracelets/bracelet-1.jpeg" alt="Gold Bracelets"></div>
+      <div class="cat-label-badge gold">Gold</div>
+      <div class="cat-info"><p class="cat-name">Bracelets</p><p class="cat-meta">22K Gold collection</p></div>
+    </a>
+   
+  </div>
+
+  <!-- ── DIAMOND ── -->
+  <div class="cat-grid hidden" id="panel-diamond">
+       <a href="Diamond/diamond-necklace.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./Diamond/Dnecklace-1.jpg" alt="Diamond Necklaces"></div>
+      <div class="cat-label-badge Diamond">Diamond</div>
+      <div class="cat-info"><p class="cat-name">Necklaces</p><p class="cat-meta"></p></div>
+    </a>
+    <a href="Diamond/diamond-bangle.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./Diamond/Dbangle1.jpg" alt="Diamond Bangles"></div>
+      <div class="cat-label-badge gold">Diamond</div>
+      <div class="cat-info"><p class="cat-name">Bangles</p><p class="cat-meta"></p></div>
+    </a>
+    <a href="Diamond/diamond-ring.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./Diamond/Dring1.jpg" alt="Diamond Rings"></div>
+      <div class="cat-label-badge gold">Diamond</div>
+      <div class="cat-info"><p class="cat-name">Rings</p><p class="cat-meta"></p></div>
+    </a>
+    
+  </div>
+
+  <!-- ── SILVER ── -->
+  <div class="cat-grid hidden" id="panel-silver">
+       <a href="C:\Users\hp\OneDrive\Desktop\Jewellary\Chandrodaya-Jewels\Silver\silver-collection.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./Silver\SCC5.jpg" alt="92.5 Silver Collections"></div>
+      <div class="cat-label-badge gold">Silver</div>
+      <div class="cat-info"><p class="cat-name">92.5 Silver Collections</p><p class="cat-meta"></p></div>
+    </a>
+    <a href="C:\Users\hp\OneDrive\Desktop\Jewellary\Chandrodaya-Jewels\Silver\silver-antiques.html" class="cat-card fade-up">
+      <div class="cat-img"><img src="./Silver\SA10.jpg" alt="Antique Silver Collections"></div>
+      <div class="cat-label-badge gold">Silver</div>
+      <div class="cat-info"><p class="cat-name">Antique Silver Collections</p><p class="cat-meta"></p></div>
+    </a>
+    
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-info fade-up">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">We'd Love to<br><em>Hear from You</em></h2>
+    <div class="gold-line"></div>
+    <p class="section-sub">Whether you're looking for the perfect gift or a bespoke creation, our team is here to assist you every step of the way.</p>
+    <div class="contact-detail">
+      <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <div class="contact-detail-text">
+        <p>Address</p>
+        <p>#10/2, 5th Main Road, 2nd Cross Rd,<br> Nagendra block, Girinagar<br>Bengaluru, Karnataka – 560050</p>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+      <div class="contact-detail-text">
+        <p>Phone</p>
+        <p>+91 90364 81987<br>+91 81977 78126</p>
+      </div>
+    </div>
+    <div class="social-links" style="margin-top:32px">
+    </div>
+  </div>
+
+   <div class="fade-up">
+    <form id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" id="firstName" placeholder="Riya">
+          <p class="form-error" id="firstNameErr">Please enter your first name</p>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="lastName" placeholder="Sharma">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="riya@example.com">
+        <p class="form-error" id="emailErr">Please enter a valid email</p>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="+91 98765 43210">
+      </div>
+      <div class="form-group">
+        <label>Interested In</label>
+        <select id="interest">
+          <option value="">Select a category</option>
+          <option>Silver Jewellery</option>
+          <option>Gold Jewellery</option>
+          <option>Diamond Collection</option>
+          <option>Custom / Bespoke</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="message" placeholder="Tell us about your vision or enquiry..."></textarea>
+        <p class="form-error" id="messageErr">Please enter a message</p>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Send Message</button>
+    </form>
+    <div class="success-msg" id="successMsg">
+      <i class="fas fa-check-circle"></i>
+      <p>Thank you for reaching out!</p>
+      <small>We'll get back to you within 24 hours</small>
+    </div>
+  </div>
+</section>
+
+<!-- STORE -->
+<section id="store">
+  <div class="section-header fade-up" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">Visit Our <em>Store</em></h2>
+    <div class="gold-line" style="margin:20px auto"></div>
+    <p class="section-sub" style="text-align:center">Step into our world of elegance.</p>
+  </div>
+  <div class="store-inner fade-up">
+    <div>
+      <p class="section-label">Bengaluru Store</p>
+      <h3 style="font-family:var(--serif);font-size:1.8rem;font-weight:300;line-height:1.3;margin-bottom:16px;color:var(--cream)">5th Main Road, 2nd Cross Rd,<br>Nagendra Block , Girinagar<br><em style="color:var(--copper)">Bengaluru</em></h3>
+      <div class="gold-line"></div>
+      <p style="font-size:0.78rem;color:var(--gray);line-height:1.9;margin-bottom:28px">Karnataka – 560050, India<br>+91 90364 81987 &nbsp;·&nbsp; +91 81977 78126</p>
+      <p class="section-label" style="margin-bottom:16px">Store Hours</p>
+      <div class="timing-row"><span class="timing-day">Monday – Saturday</span><span class="timing-hours">10 am – 2 pm &nbsp;|&nbsp; 5 – 9 pm</span></div>
+      <div class="timing-row"><span class="timing-day">Sunday</span><span class="timing-hours">10 am – 2 pm</span></div>
+    </div>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4981835406948!2d77.54939027588692!3d12.939941915569904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f475b2aab29%3A0x39876f38236b3f2e!2sChandrodaya%20Jewels!5e0!3m2!1sen!2sin!4v1774092379291!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-logo">Chandrodaya <span>Jewels</span></div>
+      <div class="social-links">
+      </div>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Gold</h4>
+      <ul>
+        <li><a href="./gold/gold-necklaces.html">Necklaces</a></li>
+        <li><a href="./gold/gold-rings.html">Rings</a></li>
+        <li><a href="./gold/gold-Kada.html">Kadas</a></li>
+        <li><a href="./gold/gold-chains.html">Chains</a></li>
+        <li><a href="./gold/gold-bracelets.html">Bracelets</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Diamond</h4>
+      <ul>
+        <li><a href="./Diamond/diamond-necklace.html">Necklaces</a></li>
+        <li><a href="./Diamond/diamond-bangle.html">Bangles</a></li>
+        <li><a href="./Diamond/diamond-ring.html">Rings</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Silver</h4>
+      <ul>
+        <li><a href="./Silver/silver-collection.html">Silver-collections</a></li>
+        <!-- <li><a href="silver-chains.html">Chains</a></li> -->
+        <li><a href="./Silver/silver-antiques.html">Silver-antiques</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#store">Store Locator</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>Chandrodaya Jewels</span>. All rights reserved.</p>
+    <p>Privacy Policy · Terms of Service</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

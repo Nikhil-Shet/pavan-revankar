@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rings – Chandrodaya Jewels</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="index.html#about" onclick="closeMobile()">About</a>
+  <a href="index.html#collection" onclick="closeMobile()">Collection</a>
+  <a href="index.html#contact" onclick="closeMobile()">Contact</a>
+  <a href="index.html#store" onclick="closeMobile()">Store</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="scrolled">
+  <a href="index.html" class="nav-logo">Chandrodaya <span>Jewels</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#collection">Collection</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="index.html#store">Store</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="collection-page">
+  <div class="collection-page-header fade-up">
+    <div>
+      <p class="section-label">Collection</p>
+      <h1 class="section-title">Our <em>Rings</em></h1>
+      <div class="gold-line"></div>
+    </div>
+    <a href="index.html#collection" class="back-link">
+      <i class="fas fa-arrow-left"></i> Back to Collections
+    </a>
+  </div>
+
+  <!-- Category sub-tabs -->
+  <div class="tabs fade-up" style="padding: 0 60px; margin-top: 32px;">
+    <a href="rings.html" class="tab-btn active">All Rings</a>
+    <a href="necklaces.html" class="tab-btn">Necklaces</a>
+    <a href="earrings.html" class="tab-btn">Earrings</a>
+    <a href="bangles.html" class="tab-btn">Bangles</a>
+  </div>
+
+  <div class="items-grid">
+
+    <div class="card fade-up">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" alt="Solitaire Ring">
+        <div class="card-overlay"></div>
+        <div class="card-badge">Diamond</div>
+      </div>
+      <div class="card-info">
+        <p class="card-name">Eternal Solitaire Ring</p>
+        <p class="card-type">Platinum · 1ct Diamond</p>
+        <p class="card-price">₹ 3,20,000</p>
+      </div>
+    </div>
+
+    <div class="card fade-up">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1601821765780-754fa98637c1?w=600&q=80" alt="Gold Ring">
+        <div class="card-overlay"></div>
+        <div class="card-badge">Gold</div>
+      </div>
+      <div class="card-info">
+        <p class="card-name">Classic Gold Band</p>
+        <p class="card-type">22K Gold · Polished</p>
+        <p class="card-price">₹ 28,000</p>
+      </div>
+    </div>
+
+    <div class="card fade-up">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=600&q=80" alt="Silver Ring">
+        <div class="card-overlay"></div>
+        <div class="card-badge">Silver</div>
+      </div>
+      <div class="card-info">
+        <p class="card-name">Lunar Silver Ring</p>
+        <p class="card-type">925 Silver · Artisan</p>
+        <p class="card-price">₹ 12,500</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-bottom" style="border-top:none; padding-top:0;">
+    <p>© 2025 <span>Chandrodaya Jewels</span>. All rights reserved.</p>
+    <p><a href="index.html" style="color:var(--copper);text-decoration:none;">← Back to Home</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
