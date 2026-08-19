@@ -114,6 +114,51 @@ nav.scrolled {
 .scroll-line { width: 1px; height: 50px; background: var(--copper); animation: scrollPulse 2s ease-in-out infinite; }
 @keyframes scrollPulse { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.6)} }
 
+/* ── FEATURED CAROUSEL ── */
+.carousel-section { position: relative; background: var(--dark2); display: flex; justify-content: center; padding: 40px 60px; }
+.carousel { position: relative; width: 90%; max-width: 1200px; height: 480px; overflow: hidden;border-radius: 15px; }
+.carousel-slide {
+  position: absolute; inset: 0; opacity: 0; z-index: 1;
+  transition: opacity 1.2s ease;
+}
+.carousel-slide.active { opacity: 1; z-index: 2; }
+.carousel-slide img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+}
+.carousel-slide-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(42,26,24,0.85) 0%, rgba(42,26,24,0.15) 45%, rgba(42,26,24,0.35) 100%);
+}
+.carousel-caption {
+  position: absolute; left: 60px; bottom: 50px; z-index: 3;
+  opacity: 0; transform: translateY(16px); transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+.carousel-slide.active .carousel-caption { opacity: 1; transform: translateY(0); }
+.carousel-label { font-size: 0.62rem; letter-spacing: 4px; text-transform: uppercase; color: var(--copper); margin-bottom: 10px; font-weight: 500; }
+.carousel-caption h3 { font-family: var(--serif); font-size: clamp(1.8rem,3.4vw,3rem); font-weight: 300; color: var(--cream); letter-spacing: 2px; }
+
+.carousel-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(42,26,24,0.4); border: 1px solid rgba(255,248,240,0.3);
+  color: var(--cream); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 0.9rem; transition: all 0.3s ease; backdrop-filter: blur(4px);
+}
+.carousel-arrow:hover { background: var(--copper); border-color: var(--copper); }
+.carousel-arrow.prev { left: 26px; }
+.carousel-arrow.next { right: 26px; }
+
+.carousel-dots {
+  position: absolute; bottom: 26px; right: 60px; z-index: 4;
+  display: flex; gap: 10px;
+}
+.carousel-dot {
+  width: 8px; height: 8px; border-radius: 50%; padding: 0;
+  background: rgba(255,248,240,0.35); border: none; cursor: pointer; transition: all 0.35s ease;
+}
+.carousel-dot:hover { background: rgba(255,248,240,0.6); }
+.carousel-dot.active { width: 26px; border-radius: 4px; background: var(--copper); }
+
 /* ── SHARED ── */
 section { padding: 100px 60px; }
 .section-label { font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase; color: var(--copper); margin-bottom: 16px; font-weight: 500; }
@@ -384,6 +429,10 @@ footer { background: var(--dark-brown); border-top: 1px solid rgba(192,133,82,0.
   .store-inner { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
   .listing-hero-content, .breadcrumb, .product-grid { padding-left: 36px; padding-right: 36px; }
+  .carousel-section { padding: 32px 36px; }
+  .carousel { width: 88%; height: 400px; }
+  .carousel-caption { left: 36px; bottom: 40px; }
+  .carousel-dots { right: 36px; }
 }
 
 @media (max-width: 768px) {
@@ -429,6 +478,16 @@ footer { background: var(--dark-brown); border-top: 1px solid rgba(192,133,82,0.
   /* Listing pages */
   .listing-hero-content, .breadcrumb, .product-grid { padding-left: 20px; padding-right: 20px; }
   .listing-hero-content { flex-direction: column; align-items: flex-start; gap: 12px; padding-bottom: 24px; }
+
+  /* Carousel */
+  .carousel-section { padding: 24px 20px; }
+  .carousel { width: 100%; height: 320px; }
+  .carousel-caption { left: 20px; bottom: 30px; }
+  .carousel-caption h3 { font-size: 1.6rem; }
+  .carousel-arrow { width: 38px; height: 38px; font-size: 0.75rem; }
+  .carousel-arrow.prev { left: 12px; }
+  .carousel-arrow.next { right: 12px; }
+  .carousel-dots { right: 20px; bottom: 16px; }
 }
 
 @media (max-width: 400px) {
