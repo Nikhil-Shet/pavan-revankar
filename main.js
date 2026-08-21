@@ -53,6 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
   let current = 0;
   let timer;
 
+  slides.forEach(slide => {
+    const img = slide.querySelector('img');
+    if (!img) return;
+    const backdrop = document.createElement('div');
+    backdrop.className = 'carousel-backdrop';
+    backdrop.style.backgroundImage = `url("${img.getAttribute('src')}")`;
+    slide.insertBefore(backdrop, img);
+  });
+
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -70,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     dots[current].classList.add('active');
   }
 
-  function startAutoplay() { timer = setInterval(() => goToSlide(current + 1), 2000); }
+  function startAutoplay() { timer = setInterval(() => goToSlide(current + 1), 3000); }
   function stopAutoplay()  { clearInterval(timer); }
   function restartAutoplay() { stopAutoplay(); startAutoplay(); }
 
